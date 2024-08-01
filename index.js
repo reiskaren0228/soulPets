@@ -3,6 +3,7 @@ import express from "express";
 import { clientesRouter } from "./routes/clientes.js";
 import { petsRouter } from "./routes/pets.js";
 
+
 authenticate(connection).then(() => {
   // Após conectar no banco de dados, ele irá sicronizar os models
   // no banco, ou seja, irá gerar as tabelas caso necessario
@@ -26,7 +27,7 @@ app.use(clientesRouter);
 app.use(petsRouter);
 
 
-// Rodar a aplicação do back-end
+// Rodar a aplicação do backend
 app.listen(3000, () => {
   console.log("Servidor rodando em http://localhost:3000/");
 });
